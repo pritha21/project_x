@@ -6,6 +6,11 @@ import cv2
 from modules.selfie_validation import SelfieValidation
 from modules.skin_tone_extractor import SkinToneExtractor
 from modules.foundation_matcher import FoundationMatcher
+import numpy as np
+
+# Patch for colormath compatibility (numpy >= 1.23 fix)
+if not hasattr(np, 'asscalar'):
+    np.asscalar = lambda a: a.item()
 
 validator = SelfieValidation()
 extractor = SkinToneExtractor(debug=True)
