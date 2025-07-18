@@ -1,0 +1,23 @@
+# ------------------------------
+# Python Dependencies for Foundation Matcher
+# ------------------------------
+
+# Core libraries
+numpy>=1.23.0
+pandas>=1.5.0
+scikit-learn>=1.1.0
+colormath==3.0.0
+face_recognition==1.3.0
+opencv-python>=4.5.0
+matplotlib>=3.5.0
+
+# ------------------------------
+# MANUAL PATCH REQUIRED:
+# ------------------------------
+# The 'colormath' library (v3.0.0) uses numpy.asscalar(), which has been removed in numpy >= 1.23.
+# To fix the issue, manually edit the following file:
+#    -> colormath/color_diff.py
+#    -> Line causing error: `return numpy.asscalar(delta_e)`
+#    -> Change to: `return delta_e.item()`
+# This ensures compatibility with modern versions of NumPy.
+# ------------------------------
