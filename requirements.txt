@@ -3,18 +3,19 @@
 # ------------------------------
 
 streamlit
-opencv-python
-numpy==1.22.4
-face_recognition
-pillow
-matplotlib
+opencv-python-headless
+numpy>=1.22,<1.24
 pandas
 scikit-learn
+matplotlib
+Pillow
 colormath==3.0.0
+dlib-bin
+face_recognition @ git+https://github.com/thetoby9944/face_recognition.git
 
 
 # ------------------------------
-# MANUAL PATCH REQUIRED:
+# MANUAL PATCH REQUIRED (for local):
 # ------------------------------
 # The 'colormath' library (v3.0.0) uses numpy.asscalar(), which has been removed in numpy >= 1.23.
 # To fix the issue, manually edit the following file:
