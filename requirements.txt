@@ -2,15 +2,15 @@
 # Python Dependencies for Foundation Matcher
 # ------------------------------
 
-numpy==1.22.4
-colormath==3.0.0
-streamlit==1.45.1
+streamlit
 opencv-python
-face-recognition
-pandas
+numpy==1.22.4
+face_recognition
+pillow
 matplotlib
+pandas
 scikit-learn
-Pillow
+colormath==3.0.0
 
 
 # ------------------------------
